@@ -23,8 +23,8 @@ RUN chmod +x /vpn/entrypoint.sh
 RUN apk add --no-cache go git
 
 # Set Go environment variables
-ENV GOPATH /go
-ENV PATH $GOPATH/bin:/usr/local/go/bin:$PATH
+ENV GOPATH=/go
+ENV PATH=$GOPATH/bin:/usr/local/go/bin:$PATH
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
 
 # Copy Go source code
