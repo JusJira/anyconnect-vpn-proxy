@@ -21,7 +21,7 @@ sleep 5
 
 # Start the Go reverse proxy
 echo "Starting reverse proxy..."
-./vpn-proxy -target=$PROXY_TARGET_IP
+./vpn-proxy -target1=$PROXY_TARGET1 -target2=$PROXY_TARGET2 -target2path=$PROXY_TARGET2_PATH -port=${PROXY_PORT:-8000}
 
 # If the Go binary exits, also terminate the VPN connection
 # This ensures clean shutdown
